@@ -1,0 +1,111 @@
+# Función para encontrar el máximo de tres números
+def max_de_tres(a, b, c):
+    return max(a, b, c)
+
+# Funciones para calcular áreas de figuras geométricas
+import math
+
+def area_cuadrado(lado):
+    return lado ** 2
+
+def area_rectangulo(base, altura):
+    return base * altura
+
+def area_circulo(radio):
+    return math.pi * radio ** 2
+
+# Función para sumar todos los números de una lista
+def sumar_lista(lista):
+    return sum(lista)
+
+# Función para multiplicar todos los números de una lista
+def multiplicar_lista(lista):
+    resultado = 1
+    for num in lista:
+        resultado *= num
+    return resultado
+
+# Función para invertir una cadena
+def invertir_cadena(cadena):
+    return cadena[::-1]
+
+# Función para calcular el factorial de un número
+def factorial(numero):
+    if numero == 0:
+        return 1
+    else:
+        return numero * factorial(numero - 1)
+
+# Función para comprobar si un número está en un rango dado
+def en_rango(rango_inicio, numero, rango_final):
+    return rango_inicio <= numero <= rango_final
+
+# Función para calcular el número de letras mayúsculas y minúsculas en una cadena
+def contar_letras(cadena):
+    mayusculas = sum(1 for letra in cadena if letra.isupper())
+    minusculas = sum(1 for letra in cadena if letra.islower())
+    return mayusculas, minusculas
+
+# Función para obtener elementos únicos de una lista
+def elementos_unicos(lista):
+    return list(set(lista))
+
+# Función para verificar si un número es primo
+def es_primo(numero):
+    if numero <= 1:
+        return False
+    for i in range(2, int(math.sqrt(numero)) + 1):
+        if numero % i == 0:
+            return False
+    return True
+
+# Función para imprimir los números pares de una lista
+def imprimir_pares(lista):
+    for num in lista:
+        if num % 2 == 0:
+            print(num)
+
+# Función para verificar si una cadena es un palíndromo
+def es_palindromo(cadena):
+    cadena = cadena.lower().replace(" ", "")
+    return cadena == cadena[::-1]
+
+# Ejemplos de uso de las funciones
+# 1. Max de tres números
+print(max_de_tres(5, 10, 3))
+
+# 2. Calcular áreas
+print(area_cuadrado(5))
+print(area_rectangulo(4, 6))
+print(area_circulo(3))
+
+# 3. Sumar todos los números de una lista
+print(sumar_lista([8, 2, 3, 0, 7]))
+
+# 4. Multiplicar todos los números de una lista
+print(multiplicar_lista([8, 2, 3, -1, 7]))
+
+# 5. Invertir una cadena
+print(invertir_cadena("1234abcd"))
+
+# 6. Calcular el factorial de un número
+print(factorial(5))
+
+# 7. Verificar si un número está en un rango dado
+print(en_rango(1, 5, 10))
+
+# 8. Contar letras mayúsculas y minúsculas
+print(contar_letras("Hello World"))
+
+# 9. Obtener elementos únicos de una lista
+print(elementos_unicos([1, 2, 2, 3, 4, 4, 5]))
+
+# 10. Verificar si un número es primo
+print(es_primo(11))
+
+# 11. Imprimir los números pares de una lista
+imprimir_pares([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# 12. Verificar si una cadena es un palíndromo
+print(es_palindromo("Ana"))
+print(es_palindromo("Anita lava la tina"))
